@@ -14,8 +14,8 @@ pipeline {
 	  stage ('GoAhead'){
        steps{
         echo '************I will be the best of all************'
-		echo 'My Env: ${env.ENV}'
-		echo 'My App Url: ${env.APP_URL}'
+		echo "My Env: ${env.ENV}"
+		echo "My App Url: ${env.APP_URL}"
       }
 	  }
 }
