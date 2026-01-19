@@ -1,6 +1,9 @@
 pipeline {
   agent any
-
+  environment{
+  ENV = 'DEV'
+  APP_URL = 'myapp.host.name'	  
+  }
   stages{ 
     stage ('SayHello'){
       steps {
@@ -11,6 +14,8 @@ pipeline {
 	  stage ('GoAhead'){
        steps{
         echo '************I will be the best of all************'
+		echo 'My Env: ${env.ENV}'
+		echo 'My App Url: ${env.APP_URL}'
       }
 	  }
 }
