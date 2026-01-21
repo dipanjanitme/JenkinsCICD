@@ -23,5 +23,10 @@ pipeline {
 		echo "My App Url in JenkinsFile: ${env.APP_URL}"
       }
 	  }
+	  stage ('callingpowershell'){
+		steps{
+		.\script\printOut.ps1 -myname "$env:myname" -isManager "$env:isManager" 
+		}
+	  
 }
 }
