@@ -26,7 +26,7 @@ pipeline {
 	  stage ('callingpowershell'){
 		steps{
 		powershell """	
-		.\\script\\printOut.ps1 -myname "$env:myname" -isManager "$env:isManager" 
+		.\\script\\printOut.ps1 -myname "${env:myname}" -isManager "${env:isManager}" 
 		"""
 		}
 	  
