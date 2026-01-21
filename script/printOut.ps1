@@ -1,4 +1,4 @@
-parameter(
+param(
 [string] $myname,
 [bool] $isManager
 )
