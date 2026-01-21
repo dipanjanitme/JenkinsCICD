@@ -4,6 +4,11 @@ pipeline {
   ENV = 'DEV'
   APP_URL = 'myapp.host.name'	  
   }
+  parameters{
+  string(name: 'myname',defaultValue: 'Dipanjan',description:'This is my name')
+  booleanParam(name: 'isManager', defaultValue: false, description: 'Is he a manager')
+  }
+  
   stages{ 
     stage ('SayHello'){
       steps {
