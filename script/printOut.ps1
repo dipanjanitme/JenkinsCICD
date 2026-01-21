@@ -1,6 +1,6 @@
 parameter(
-[string] myname,
-[bool]isManager
+[string] $myname,
+[bool] $isManager
 )
 Write-OutPut "I am working on creating my first ever Jenkins pipeline"
 Write-OutPut "Env Variable in powershell script is: $env:ENV"
